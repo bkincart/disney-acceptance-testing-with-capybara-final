@@ -1,5 +1,4 @@
-require "spec_helper" # or
-# require "rails_helper"
+require "spec_helper"
 
 feature "template", focus: true do
 
