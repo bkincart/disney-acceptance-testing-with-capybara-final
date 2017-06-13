@@ -19,10 +19,6 @@ get "/movies" do
   erb :"movies/index"
 end
 
-get "/movies/new" do
-  erb :"movies/new"
-end
-
 post "/movies/new" do
   title = params["title"]
   release_year = params["release_year"]
