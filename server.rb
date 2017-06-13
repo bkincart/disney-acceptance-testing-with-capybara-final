@@ -19,21 +19,6 @@ get "/movies" do
   erb :"movies/index"
 end
 
-post "/movies/new" do
-  title = params["title"]
-  release_year = params["release_year"]
-  runtime = params["runtime"]
-  if [title, release_year, runtime].include?("")
-    @error = true
-    erb :"movies/new"
-  else
-    CSV.open(csv_file, "a", headers: true) do |csv|
-      csv << [params["title"], params["release_year"], params["runtime"]]
-    end
-    redirect "/movies"
-  end
-end
-
 
 # Helper Methods
 
