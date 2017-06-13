@@ -1,0 +1,16 @@
+<h3>Enter Movie Details</h3>
+
+<% if @error %>
+  <p> <%= @error %> </p>
+<% end %>
+
+<form action='/movies/new' method='post'>
+  <label for='title'>Title</label>
+  <input id='title' name='title' type='text' />
+  <label for='release_year'>Release Year</label>
+  <input id='release_year' name='release_year' type='text' />
+  <label for='runtime'>Runtime</label>
+  <input id='runtime' name='runtime' type='text' />
+
+  <input type='submit' value='Submit' />
+</form>
